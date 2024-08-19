@@ -22,7 +22,7 @@ const cors = require('cors')
 
 require('dotenv').config()
 app.use(cors({
-  origin:["https://organicfrontend.vercel.app/"],
+  origin:["https://organicfrontend.vercel.app"],
   methods:["GET","POST","PATCH","DELETE"],
   credentials:true
 }))

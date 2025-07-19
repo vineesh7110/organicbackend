@@ -22,7 +22,11 @@ const cors = require('cors')
 
 require('dotenv').config()
 app.use(cors({
-  origin:["https://organicfrontend.vercel.app"],
+  
+  //origin:["https://organicfrontend.vercel.app"],
+  origin:["http://localhost:5173"],
+
+
   methods:["GET","POST","PATCH","DELETE"],
   credentials:true
 }))
@@ -105,9 +109,16 @@ app.post('/users/verify', async (req, res) => {
 
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+//app.listen(port, () => {
+ // console.log(`Example app listening on port ${port}`)
+//})
+
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
+});
+
+
+
 
 
 

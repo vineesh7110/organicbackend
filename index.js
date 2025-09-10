@@ -24,7 +24,8 @@ require('dotenv').config()
 app.use(cors({
   
   //origin:["https://organicfrontend.vercel.app"],
-  origin:["http://localhost:5173"],
+  //origin:["http://localhost:5173"],
+ origin: ["https://www.gronetplus.com"],
 
 
   methods:["GET","POST","PATCH","DELETE"],

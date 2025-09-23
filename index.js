@@ -25,7 +25,7 @@ app.use(cors({
   
   //origin:["https://organicfrontend.vercel.app"],
   //origin:["http://localhost:5173"],
- origin: ["https://org.gronetplus.com"],
+ origin: ["http://org.gronetplus.com","https://org.gronetplus.com"],
 
 
   methods:["GET","POST","PATCH","DELETE"],

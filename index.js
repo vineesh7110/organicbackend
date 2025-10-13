@@ -30,7 +30,7 @@ app.use(cors({
  origin: ["https://org.gronetplus.com"],
 
 
-  methods:["GET","POST","PATCH","DELETE"],
+  methods:["GET","POST","PATCH","DELETE","OPTIONS"],
   credentials:true
 }))
 app.use(express.json())

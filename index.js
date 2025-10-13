@@ -12,6 +12,7 @@ const contactRoutes = require('./routes/contactRoutes')
 const productRoutes = require('./routes/productsRoutes')
 const cartRoutes = require('./routes/cartRoutes')
 const paymentRoutes = require('./routes/paymentformRoutes')
+const userRoutes = require('./routes/userRoutes');
 
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
@@ -45,7 +46,7 @@ app.use('/api/contact',contactRoutes)
 //app.use('/products/:productsId',productRoutes)
 app.use('/api/cart',cartRoutes)
 app.use('/api/form',paymentRoutes)
-app.use('/api/user',userRoutes)
+app.use('/api/users',userRoutes)
 
 app.post('/users/signup', async (req, res) => {
   try {
@@ -117,9 +118,11 @@ app.post('/users/verify', async (req, res) => {
  // console.log(`Example app listening on port ${port}`)
 //})
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
+//app.listen(5000, () => {
+ // console.log("Server running on port 5000");
+//});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
 

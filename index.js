@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser')
 const jwt = require('jsonwebtoken');
 const router = express.Router()
-///const User = require('./models/user') 
+const User = require('./models/user') 
 const Product = require('./models/products')
 const Contact = require('./models/contact')
 const Cart = require('./models/cart')
@@ -45,6 +45,7 @@ app.use('/api/contact',contactRoutes)
 //app.use('/products/:productsId',productRoutes)
 app.use('/api/cart',cartRoutes)
 app.use('/api/form',paymentRoutes)
+app.use('/api/user',userRoutes)
 
 app.post('/users/signup', async (req, res) => {
   try {

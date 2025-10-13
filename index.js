@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.use('/products',productRoutes)
+app.use('/api/products',productRoutes)
 app.use('/contact',contactRoutes)
 app.use('/products/:productsId',productRoutes)
 app.use('/cart',cartRoutes)

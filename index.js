@@ -41,10 +41,10 @@ app.get('/', (req, res) => {
 })
 
 app.use('/api/products',productRoutes)
-app.use('/contact',contactRoutes)
-app.use('/products/:productsId',productRoutes)
-app.use('/cart',cartRoutes)
-app.use('/form',paymentRoutes)
+app.use('/api/contact',contactRoutes)
+//app.use('/products/:productsId',productRoutes)
+app.use('/api/cart',cartRoutes)
+app.use('/api/form',paymentRoutes)
 
 app.post('/users/signup', async (req, res) => {
   try {

@@ -1,5 +1,5 @@
 const express = require('express')
-const router = express()
+const router = express.Router(); 
 const Contact = require('../models/contact')
 
 router.post('/', async (req, res) => {
@@ -15,4 +15,4 @@ router.post('/', async (req, res) => {
     }
   
   })
-  module.exports = router
+  module.exports = router;

@@ -1,5 +1,5 @@
-const express = require('express')
-const router = express()
+const express = require('express');
+const router = express.Router(); 
 
 const Payment = require('../models/paymentform')
 
@@ -16,4 +16,4 @@ router.post('/', async (req, res) => {
     }
   
   })
-  module.exports = router
+  module.exports = router;

@@ -121,23 +121,32 @@ app.post('/users/verify', async (req, res) => {
 
 //app.listen(5000, () => {
  // console.log("Server running on port 5000");
-//});
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
-
-
-
-
-
-main().then(() => console.log("DB Connected")).catch(err => console.log(err));
 
 async function main() {
   const url = process.env.DB_URL
   const password = process.env.DB_PASSWORD
   const urlwithpassword = url.replace('<password>', password)
-
   await mongoose.connect(urlwithpassword);
+  console.log("DB Connected")
+}
+
+main().then(() => {
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+}).catch(err => console.log(err))
+
+
+
+
+
+//main().then(() => console.log("DB Connected")).catch(err => console.log(err));
+
+//async function main() {
+  //const url = process.env.DB_URL
+  //const password = process.env.DB_PASSWORD
+  //const urlwithpassword = url.replace('<password>', password)
+
+  //await mongoose.connect(urlwithpassword);
 
   // use `await mongoose.connect('mongodb://user: password@127.0.0.1:27017/test');` if your database has auth enabled
-}
+//}

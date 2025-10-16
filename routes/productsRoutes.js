@@ -9,7 +9,7 @@ router.post('/', async (req, res) => {
       await product.save()
   
       res.status(201).json(product)
-      console.log(user)
+      console.log(product)
     }
     catch (err) {
       res.status(500).send('invalid signup!')

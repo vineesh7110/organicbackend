@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser')
 const jwt = require('jsonwebtoken');
-const router = express.Router()
+
 const User = require('./models/user') 
 const Product = require('./models/products')
 const Contact = require('./models/contact')
